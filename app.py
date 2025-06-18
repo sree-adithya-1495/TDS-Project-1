@@ -27,7 +27,7 @@ SIMILARITY_THRESHOLD = 0.50  # Lowered threshold for better recall
 MAX_RESULTS = 10  # Increased to get more context
 load_dotenv()
 MAX_CONTEXT_CHUNKS = 4  # Increased number of chunks per source
-API_KEY = os.getenv("API_KEY")  # Get API key from environment variable
+API_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjIzZjEwMDE5MTFAZHMuc3R1ZHkuaWl0bS5hYy5pbiJ9.0j9Dygxry6JwavbYQyX0qYAX_1ymCgJ-nLPTok5qrRA"
 
 # Models
 class QueryRequest(BaseModel):
@@ -725,4 +725,4 @@ async def health_check():
         )
 
 if __name__ == "__main__":
-    uvicorn.run("app:app", host="0.0.0.0", port=10000, reload=True) 
+    uvicorn.run("app:app", host="localhost", port=8000, reload=True) 
